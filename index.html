@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BrainSTEM - Gamified Learning Platform</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-icon">🧠</span>
+                <span class="logo-text">BrainSTEM</span>
+            </div>
+            <div class="nav-links">
+                <button class="nav-btn active" data-view="dashboard">Dashboard</button>
+                <button class="nav-btn" data-view="learning">Learning</button>
+                <button class="nav-btn" data-view="achievements">Achievements</button>
+                <button class="nav-btn" data-view="leaderboard">Leaderboard</button>
+                <button class="nav-btn" data-view="teacher">Teacher</button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <!-- Dashboard View -->
+        <div id="dashboard-view" class="view active">
+            <div class="dashboard-header">
+                <h1 class="greeting">Good Evening, Jessica! 👋</h1>
+                <p class="greeting-subtitle">Ready to learn something new today?</p>
+            </div>
+
+            <div class="dashboard-grid">
+                <div class="progress-card">
+                    <h3>Daily Progress</h3>
+                    <div class="circular-progress">
+                        <svg class="progress-ring" width="120" height="120">
+                            <circle class="progress-ring-background" cx="60" cy="60" r="52" />
+                            <circle class="progress-ring-progress" cx="60" cy="60" r="52" />
+                        </svg>
+                        <div class="progress-text">
+                            <span class="progress-value">60%</span>
+                            <span class="progress-label">Goal</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="stats-card">
+                    <h3>Your Stats</h3>
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <span class="stat-icon">🔥</span>
+                            <div>
+                                <div class="stat-value">7</div>
+                                <div class="stat-label">Day Streak</div>
+                            </div>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-icon">⭐</span>
+                            <div>
+                                <div class="stat-value">1,247</div>
+                                <div class="stat-label">XP Points</div>
+                            </div>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-icon">🎮</span>
+                            <div>
+                                <div class="stat-value">3/5</div>
+                                <div class="stat-label">Games Today</div>
+                            </div>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-icon">📊</span>
+                            <div>
+                                <div class="stat-value">Level 8</div>
+                                <div class="stat-label">Current</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="challenges-card">
+                    <h3>Daily Challenges</h3>
+                    <div class="challenge-list" id="challenge-list">
+                        <!-- Challenges will be populated by JavaScript -->
+                    </div>
+                </div>
+
+                <div class="recent-achievements">
+                    <h3>Recent Achievements</h3>
+                    <div class="achievement-preview" id="achievement-preview">
+                        <!-- Recent achievements will be populated by JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Learning View -->
+        <div id="learning-view" class="view">
+            <div class="learning-header">
+                <h1>Learning Modules</h1>
+                <p>Explore different subjects and master new skills</p>
+            </div>
+            <div class="categories-grid" id="categories-grid">
+                <!-- Categories will be populated by JavaScript -->
+            </div>
+        </div>
+
+        <!-- Achievements View -->
+        <div id="achievements-view" class="view">
+            <div class="achievements-header">
+                <h1>Your Achievements</h1>
+                <p>Collect badges and unlock new milestones</p>
+            </div>
+            <div class="achievements-grid" id="achievements-grid">
+                <!-- Achievements will be populated by JavaScript -->
+            </div>
+        </div>
+
+        <!-- Leaderboard View -->
+        <div id="leaderboard-view" class="view">
+            <div class="leaderboard-header">
+                <h1>🏆 Leaderboard</h1>
+                <p>See how you rank among your peers</p>
+            </div>
+            <div class="leaderboard-table" id="leaderboard-table">
+                <!-- Leaderboard will be populated by JavaScript -->
+            </div>
+        </div>
+
+        <!-- Teacher View -->
+        <div id="teacher-view" class="view">
+            <div class="teacher-header">
+                <h1>👩‍🏫 Teacher Dashboard</h1>
+                <p>Monitor student progress and performance</p>
+            </div>
+            <div class="teacher-grid">
+                <div class="overview-card">
+                    <h3>Class Overview</h3>
+                    <div class="overview-stats" id="overview-stats">
+                        <!-- Overview stats will be populated by JavaScript -->
+                    </div>
+                </div>
+                <div class="top-performers-card">
+                    <h3>Top Performers</h3>
+                    <div class="performers-list" id="performers-list">
+                        <!-- Top performers will be populated by JavaScript -->
+                    </div>
+                </div>
+                <div class="subject-performance-card">
+                    <h3>Subject Performance</h3>
+                    <div class="subject-stats" id="subject-stats">
+                        <!-- Subject performance will be populated by JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Game Modal -->
+        <div id="game-modal" class="modal hidden">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 id="game-title">Game Title</h2>
+                    <button class="close-btn" id="close-game">&times;</button>
+                </div>
+                <div class="modal-body" id="game-content">
+                    <!-- Game content will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
